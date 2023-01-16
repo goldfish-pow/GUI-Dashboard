@@ -8,12 +8,19 @@ public class NumVar extends JLabel
     private String variable_name;
     private int variable_value;
 
-    public NumVar(int x, int y, int wid, int hei, String name)
+    public NumVar(int x, int y, String name)
     {
-        this.setBounds(x, y, wid, hei);
+        variable_name = name;
         this.setText(name + ": 0");
+        this.setBounds(x, y, 500, 15);
         
-        Thread thr = new Thread();
+        MyThread thr = new MyThread(this);
+        thr.start();
+    }
+
+    public void change(int num)
+    {
+        this.setText(variable_name + ": " + num);
     }
 
 }
