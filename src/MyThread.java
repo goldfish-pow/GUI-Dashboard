@@ -3,22 +3,19 @@ import java.awt.*;
 import javax.swing.*;
 import javax.swing.event.ChangeListener;
 
-public class MyThread extends Thread
-{
-    NumVar variable;
+import java.lang.Thread;
 
-    public MyThread(NumVar var)
-    {
-        variable = var;
-    }
-    
+
+
+public class MyThread extends Driver implements Runnable
+{
     @Override
     public void run()
     {
         while(true)
         {
-            variable.change(MyFrame.mousePosX);
-            variable.repaint();
+            mouseposition.change(MyFrame.mousePosX);
+            mouseposition.repaint();
         }
     }
 }

@@ -16,6 +16,7 @@ public class MyFrame extends JFrame implements MouseInputListener{
         this.setResizable(false);
         this.setLayout(null);
         this.addMouseListener(this);
+        this.setBackground(Color.white);
     }
 
     public void addLabel(Label label)
