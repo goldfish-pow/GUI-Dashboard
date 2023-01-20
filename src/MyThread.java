@@ -16,6 +16,14 @@ public class MyThread extends Driver implements Runnable
         {
             mouseposition.change(MyFrame.mousePosX);
             mouseposition.repaint();
+            
+            int  mouseX = MyFrame.mousePosX;
+            int  mouseY = MyFrame.mousePosY;
+
+            int val = mouseX / mouseY;
+
+            rob.old_ang = rob.ang;
+            rob.mouseAng = (int)Math.atan(val);
         }
     }
 }

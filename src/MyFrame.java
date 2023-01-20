@@ -6,6 +6,7 @@ import javax.swing.event.MouseInputListener;
 
 public class MyFrame extends JFrame implements MouseInputListener{
     static int mousePosX = 0;
+    static int mousePosY = 0;
     
     MyFrame()
     {
@@ -28,6 +29,7 @@ public class MyFrame extends JFrame implements MouseInputListener{
     public void mouseClicked(MouseEvent e) {
         // TODO Auto-generated method stub
         mousePosX = e.getX();
+        mousePosY = e.getY();
     }
 
     @Override
