@@ -4,9 +4,13 @@ import java.awt.event.MouseEvent;
 import javax.swing.*;
 import javax.swing.event.MouseInputListener;
 
+import java.awt.event.*;
+import java.awt.image.*;
+
 public class MyFrame extends JFrame implements MouseInputListener{
     static int mousePosX = 0;
     static int mousePosY = 0;
+    private Image background_img = new ImageIcon("images/DashboardBackground.png").getImage();
     
     MyFrame()
     {
@@ -17,12 +21,22 @@ public class MyFrame extends JFrame implements MouseInputListener{
         this.setResizable(false);
         this.setLayout(null);
         this.addMouseListener(this);
-        this.setBackground(Color.white);
+        this.getContentPane().setBackground(Color.black);;
+
+        this.setBackground(Color.black);
     }
 
     public void addLabel(Label label)
     {
         this.add(label);
+    }
+
+    public void paint(Graphics g)
+    {
+        Graphics2D g2D = (Graphics2D) g;
+        
+        //g2D.rotate(Math.toRadians(ang), body_img_icon.getIconWidth() / 2, body_img_icon.getIconHeight() / 2);
+        g2D.drawImage(background_img, 0, 0, null);
     }
 
     @Override

@@ -13,5 +13,9 @@ public class Driver{
 
         rob = new Robot();
         frame.add(rob);
+
+        MyThread thr = new MyThread();
+        Thread myThread = new Thread(thr);
+        myThread.start();
     }
 }

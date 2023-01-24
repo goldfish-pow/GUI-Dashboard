@@ -11,11 +11,9 @@ public class NumVar extends JLabel
     {
         variable_name = name;
         this.setText(name + ": 0");
-        this.setBounds(x, y, 500, 15);
-        
-        MyThread thr = new MyThread();
-        Thread myThread = new Thread(thr);
-        myThread.start();
+        this.setBounds(x, y, 150, 15);
+        this.setForeground(Color.white);
+        this.setBackground(Color.black);
     }
 
     public void change(int num)
