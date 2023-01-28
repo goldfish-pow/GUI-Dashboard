@@ -8,6 +8,7 @@
         "c:\\Users\\Jujus\\Downloads\\openjfx-19_windows-x64_bin-sdk\\javafx-sdk-19\\lib\\javafx.media.jar",
         "c:\\Users\\Jujus\\Downloads\\openjfx-19_windows-x64_bin-sdk\\javafx-sdk-19\\lib\\javafx.swing.jar",
         "c:\\Users\\Jujus\\Downloads\\openjfx-19_windows-x64_bin-sdk\\javafx-sdk-19\\lib\\javafx.web.jar",
-        "c:\\Users\\Jujus\\Downloads\\openjfx-19_windows-x64_bin-sdk\\javafx-sdk-19\\lib\\javafx-swt.jar"
+        "c:\\Users\\Jujus\\Downloads\\openjfx-19_windows-x64_bin-sdk\\javafx-sdk-19\\lib\\javafx-swt.jar",
+        "c:\\Users\\Jujus\\Downloads\\webcam-capture-0.3.12-dist\\webcam-capture-0.3.12.jar"
     ]
 }

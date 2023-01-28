@@ -15,13 +15,13 @@ public class MyFrame extends JFrame implements MouseInputListener{
     MyFrame()
     {
         this.setTitle("GUI Dashboard");
-        this.setSize(1200, 700);
+        this.setSize(1550, 850);
         this.setVisible(true); //make frame visible
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setResizable(false);
         this.setLayout(null);
         this.addMouseListener(this);
-        this.getContentPane().setBackground(Color.black);;
+        this.getContentPane().setBackground(Color.black);
 
         this.setBackground(Color.black);
     }
@@ -31,6 +31,7 @@ public class MyFrame extends JFrame implements MouseInputListener{
         this.add(label);
     }
 
+    /* 
     public void paint(Graphics g)
     {
         Graphics2D g2D = (Graphics2D) g;
@@ -38,6 +39,7 @@ public class MyFrame extends JFrame implements MouseInputListener{
         //g2D.rotate(Math.toRadians(ang), body_img_icon.getIconWidth() / 2, body_img_icon.getIconHeight() / 2);
         g2D.drawImage(background_img, 0, 0, null);
     }
+    */
 
     @Override
     public void mouseClicked(MouseEvent e) {

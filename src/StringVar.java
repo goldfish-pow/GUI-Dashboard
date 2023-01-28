@@ -1,24 +1,22 @@
 import java.awt.*;
 
 import javax.swing.*;
-import javax.swing.event.ChangeListener;
 
-public class NumVar extends JLabel
-{
+public class StringVar extends JLabel{
     private String variable_name;
 
-    public NumVar(int x, int y, String name)
+    public StringVar(int x, int y, String name)
     {
         variable_name = name;
-        this.setText(name + ": 0");
+        this.setText(name + ": ");
         this.setBounds(x, y, 150, 15);
         this.setForeground(Color.white);
         //this.setBackground(Color.white);
     }
 
-    public void change_num(int num)
+    public void change_string(String s)
     {
-        this.setText(variable_name + ": " + num);
+        this.setText(variable_name + ": " + s);
     }
 
     public void change_position(int x, int y)
