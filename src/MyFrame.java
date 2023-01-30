@@ -8,8 +8,8 @@ import java.awt.event.*;
 import java.awt.image.*;
 
 public class MyFrame extends JFrame implements MouseInputListener{
-    static int mousePosX = 0;
-    static int mousePosY = 0;
+    public int mousePosX = 0;
+    public int mousePosY = 0;
     private Image background_img = new ImageIcon("images/DashboardBackground.png").getImage();
     
     MyFrame()
