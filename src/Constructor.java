@@ -6,6 +6,7 @@ public class Constructor {
     public SwerveVariable swer_var;
     public WebCamCapture web;
     public MyFrame frame;
+    public GameMap game_map;
 
     public Constructor()
     {
@@ -23,5 +24,7 @@ public class Constructor {
         //mouseposition = new NumVar(10, 10, "Mouse X Position");
   
         rob = new Robot();
+
+        game_map = new GameMap();
     }
 }

@@ -1,8 +1,5 @@
 import java.awt.*;
 import javax.swing.*;
-import javax.swing.event.MouseInputListener;
-
-import java.awt.event.*;
 import java.awt.image.*;
 
 public class Robot extends JPanel{

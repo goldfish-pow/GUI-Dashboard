@@ -4,9 +4,6 @@ import java.awt.event.MouseEvent;
 import javax.swing.*;
 import javax.swing.event.MouseInputListener;
 
-import java.awt.event.*;
-import java.awt.image.*;
-
 public class MyFrame extends JFrame implements MouseInputListener{
     public int mousePosX = 0;
     public int mousePosY = 0;

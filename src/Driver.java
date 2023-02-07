@@ -1,7 +1,3 @@
-import java.awt.*;
-
-import javax.swing.*;
-
 public class Driver{
     
     public static void main(String[] args){
@@ -11,7 +7,7 @@ public class Driver{
         
         con.frame.add(con.other_var);
         con.frame.add(con.vis_var);
-
+        
         con.frame.add(con.swer_var);
 
         //con.frame.add(web.webcamPanel);
@@ -19,6 +15,7 @@ public class Driver{
         //con.frame.add(mouseposition);
   
         con.frame.add(con.rob);
+        con.frame.add(con.game_map);
 
         myThread.start();
     }

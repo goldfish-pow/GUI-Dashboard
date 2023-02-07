@@ -1,7 +1,6 @@
 import java.awt.*;
 
 import javax.swing.*;
-import javax.swing.event.ChangeListener;
 
 public class NumVar extends JLabel
 {

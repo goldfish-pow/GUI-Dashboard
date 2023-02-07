@@ -1,12 +1,3 @@
-import java.awt.*;
-
-import javax.swing.*;
-import javax.swing.event.ChangeListener;
-
-import java.lang.Thread;
-
-
-
 public class MyThread extends Driver implements Runnable
 {
     Constructor con;
