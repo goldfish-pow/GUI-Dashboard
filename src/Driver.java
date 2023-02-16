@@ -10,12 +10,13 @@ public class Driver{
         
         con.frame.add(con.swer_var);
 
-        //con.frame.add(web.webcamPanel);
 
         //con.frame.add(mouseposition);
   
         con.frame.add(con.rob);
         con.frame.add(con.game_map);
+        
+        con.frame.addKeyListener(con.game_map);
 
         myThread.start();
     }

@@ -1,3 +1,6 @@
+import java.awt.*;
+import java.awt.event.*;
+
 public class MyThread extends Driver implements Runnable
 {
     Constructor con;
@@ -28,8 +31,9 @@ public class MyThread extends Driver implements Runnable
             con.swer_var.variable3.setLocation(10, 110);
             
             con.other_var.variable1.change_num(con.frame.mousePosX);
-            con.rob.change_rotation(con.frame.mousePosX, "Top-Left");
-            con.rob.change_rotation(-con.frame.mousePosX, "Top-Right");
+            con.rob.change_wheel_rotation(con.frame.mousePosX, "Top-Left");
+            con.rob.change_wheel_rotation(-con.frame.mousePosX, "Top-Right");
+            con.rob.change_body_rotation(-con.frame.mousePosX);
         }
     }
 }

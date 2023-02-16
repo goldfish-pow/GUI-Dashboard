@@ -4,7 +4,6 @@ public class Constructor {
     public OtherVariables other_var;
     public VisionVariable vis_var;
     public SwerveVariable swer_var;
-    public WebCamCapture web;
     public MyFrame frame;
     public GameMap game_map;
 
