@@ -9,19 +9,27 @@ public class Robot extends JPanel{
     private Image wheel_bottomRight = new ImageIcon("images/RobotWheel.png").getImage();;
     private Image body = new ImageIcon("images/RobotBody.png").getImage();
 
-    private int x_tl = (int)(100 * Math.sin(Math.toRadians(315)));
-    private int y_tl = (int)(100 * Math.cos(Math.toRadians(315)));
+    //top left wheel position
+    private int x_tl = (int)(70 * Math.sin(Math.toRadians(225))) + 50;
+    private int y_tl = (int)(70 * Math.cos(Math.toRadians(225))) + 50;
 
-    private int x_tr = (int)(100* Math.sin(Math.toRadians(45))) + 70;
-    private int y_tr = (int)(Math.cos(Math.toRadians(45)));
+    //top right wheel position
+    private int x_tr = (int)(70 * Math.sin(Math.toRadians(135))) + 55;
+    private int y_tr = (int)(70 * Math.cos(Math.toRadians(135))) + 50;
 
-    private int x_bl = (int)(Math.sin(Math.toRadians(225 - 180)));
-    private int y_bl = (int)(Math.cos(Math.toRadians(225 - 180))) + 100;
+    //bottom left wheel position
+    private int x_bl = (int)(70 * Math.sin(Math.toRadians(315))) + 50;
+    private int y_bl = (int)(70 * Math.cos(Math.toRadians(315))) + 50;
 
-    private int x_br = (int)(Math.sin(Math.toRadians(135 - 180))) + 103;
-    private int y_br = (int)(Math.cos(Math.toRadians(135 - 180))) + 100;
+    //bottom right wheel position
+    private int x_br = (int)(70 * Math.sin(Math.toRadians(45))) + 55;
+    private int y_br = (int)(70 * Math.cos(Math.toRadians(45))) + 50;
 
     private int body_ang = 0;
+    private int tl_ang = 0;
+    private int tr_ang = 0;
+    private int bl_ang = 0;
+    private int br_ang = 0;
 
     private Graphics2D g2D;
 
@@ -51,8 +59,23 @@ public class Robot extends JPanel{
     public void change_body_rotation(int new_ang) {
         if(body_ang != new_ang)
         {
-            x_tl = (int)(100 * Math.sin(Math.toRadians(315 + new_ang - 180)));
-            y_tl = (int)(100 * Math.cos(Math.toRadians(315 + new_ang - 180)));
+            x_tl = (int)(70 * Math.sin(Math.toRadians(225 + new_ang))) + 50;
+            y_tl = (int)(70 * Math.cos(Math.toRadians(225 + new_ang))) + 50;
+
+            x_tr = (int)(70 * Math.sin(Math.toRadians(135 + new_ang))) + 55;
+            y_tr = (int)(70 * Math.cos(Math.toRadians(135 + new_ang))) + 50;
+
+            x_bl = (int)(70 * Math.sin(Math.toRadians(315 + new_ang))) + 50;
+            y_bl = (int)(70 * Math.cos(Math.toRadians(315 + new_ang))) + 50;
+
+            x_br = (int)(70 * Math.sin(Math.toRadians(45 + new_ang))) + 55;
+            y_br = (int)(70 * Math.cos(Math.toRadians(45 + new_ang))) + 50;
+
+            this.rotateWheel(tl_ang + new_ang, this, "Top-Left");
+            this.rotateWheel(tr_ang + new_ang, this, "Top-Right");
+            this.rotateWheel(bl_ang + new_ang, this, "Bottom-Left");
+            this.rotateWheel(br_ang + new_ang, this, "Bottom-Right");
+
             System.out.println("x: " + x_tl + "y: " + y_tl);
             body_ang = new_ang;
         }
@@ -64,6 +87,41 @@ public class Robot extends JPanel{
     {
         ImageIcon icon = new ImageIcon(image);
         Image icon_img = new ImageIcon(image).getImage();
+        BufferedImage blankCanvas = new BufferedImage(icon.getIconWidth(), icon.getIconHeight(), BufferedImage.TYPE_INT_ARGB);
+        Graphics2D gg2d = (Graphics2D)blankCanvas.getGraphics();
+        gg2d.rotate(Math.toRadians(-degrees), icon.getIconWidth()/2, icon.getIconHeight()/2);
+        gg2d.drawImage(icon_img, 0, 0, o);
+        
+        if(pos.equals("Top-Left"))
+        {
+            this.wheel_topLeft = blankCanvas;
+            tl_ang = (int) degrees;
+        }
+        else if(pos.equals("Top-Right"))
+        {
+            this.wheel_topRight = blankCanvas;
+            tr_ang = (int) degrees;
+        }
+        else if(pos.equals("Bottom-Left"))
+        {
+            this.wheel_bottomLeft = blankCanvas;
+            bl_ang = (int) degrees;
+        }
+        else if(pos.equals("Bottom-Right"))
+        {
+            this.wheel_bottomRight = blankCanvas;
+            br_ang = (int) degrees;
+        }
+        else if(pos.equals("Body"))
+        {
+            this.body = blankCanvas;
+        }
+    }
+
+    public void rotateWheel(double degrees, ImageObserver o, String pos)
+    {
+        ImageIcon icon = new ImageIcon("images/RobotWheel.png");
+        Image icon_img = new ImageIcon("images/RobotWheel.png").getImage();
         BufferedImage blankCanvas = new BufferedImage(icon.getIconWidth(), icon.getIconHeight(), BufferedImage.TYPE_INT_ARGB);
         Graphics2D gg2d = (Graphics2D)blankCanvas.getGraphics();
         gg2d.rotate(Math.toRadians(-degrees), icon.getIconWidth()/2, icon.getIconHeight()/2);
@@ -84,10 +142,6 @@ public class Robot extends JPanel{
         else if(pos.equals("Bottom-Right"))
         {
             this.wheel_bottomRight = blankCanvas;
-        }
-        else if(pos.equals("Body"))
-        {
-            this.body = blankCanvas;
         }
     }
 }
