@@ -2,11 +2,11 @@ import java.awt.*;
 import javax.swing.*;
 import java.awt.image.*;
 
-public class Robot extends JPanel{
-    private Image wheel_topLeft = new ImageIcon("images/RobotWheel.png").getImage();;
-    private Image wheel_topRight = new ImageIcon("images/RobotWheel.png").getImage();;
-    private Image wheel_bottomLeft = new ImageIcon("images/RobotWheel.png").getImage();;
-    private Image wheel_bottomRight = new ImageIcon("images/RobotWheel.png").getImage();;
+public class VisualRobot extends JPanel{
+    private Image wheel_topLeft = new ImageIcon("images/RobotWheel.png").getImage();
+    private Image wheel_topRight = new ImageIcon("images/RobotWheel.png").getImage();
+    private Image wheel_bottomLeft = new ImageIcon("images/RobotWheel.png").getImage();
+    private Image wheel_bottomRight = new ImageIcon("images/RobotWheel.png").getImage();
     private Image body = new ImageIcon("images/RobotBody.png").getImage();
 
     //top left wheel position
@@ -33,7 +33,7 @@ public class Robot extends JPanel{
 
     private Graphics2D g2D;
 
-    public Robot()
+    public VisualRobot()
     {
         this.setBounds(640, 10, 150, 150);
         //this.setBackground(new Color(158, 187, 232));

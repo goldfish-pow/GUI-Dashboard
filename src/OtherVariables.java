@@ -4,7 +4,7 @@ import javax.swing.*;
 
 public class OtherVariables extends JPanel{
     public NumVar variable1 = new NumVar(10, 30, "Variable 1");
-    public NumVar variable2 = new NumVar(10, 70, "Variable 2");
+    public NumVar speed = new NumVar(10, 70, "Speed");
     public NumVar variable3 = new NumVar(10, 110, "Variable 3");
     JLabel title = new JLabel("Other Variables");
     
@@ -18,7 +18,7 @@ public class OtherVariables extends JPanel{
         this.setBounds(10, 10, 400, 140);
         this.add(title);
         this.add(variable1);
-        this.add(variable2);
+        this.add(speed);
         this.add(variable3);
     }
 }

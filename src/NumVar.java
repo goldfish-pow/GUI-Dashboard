@@ -15,7 +15,7 @@ public class NumVar extends JLabel
         //this.setBackground(Color.white);
     }
 
-    public void change_num(int num)
+    public void change_num(double num)
     {
         this.setText(variable_name + ": " + num);
     }

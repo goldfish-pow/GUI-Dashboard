@@ -1,14 +1,19 @@
 {
-    "java.project.referencedLibraries": [
-        "lib/**/*.jar",
-        "c:\\Users\\Jujus\\Downloads\\openjfx-19_windows-x64_bin-sdk\\javafx-sdk-19\\lib\\javafx.base.jar",
-        "c:\\Users\\Jujus\\Downloads\\openjfx-19_windows-x64_bin-sdk\\javafx-sdk-19\\lib\\javafx.controls.jar",
-        "c:\\Users\\Jujus\\Downloads\\openjfx-19_windows-x64_bin-sdk\\javafx-sdk-19\\lib\\javafx.fxml.jar",
-        "c:\\Users\\Jujus\\Downloads\\openjfx-19_windows-x64_bin-sdk\\javafx-sdk-19\\lib\\javafx.graphics.jar",
-        "c:\\Users\\Jujus\\Downloads\\openjfx-19_windows-x64_bin-sdk\\javafx-sdk-19\\lib\\javafx.media.jar",
-        "c:\\Users\\Jujus\\Downloads\\openjfx-19_windows-x64_bin-sdk\\javafx-sdk-19\\lib\\javafx.swing.jar",
-        "c:\\Users\\Jujus\\Downloads\\openjfx-19_windows-x64_bin-sdk\\javafx-sdk-19\\lib\\javafx.web.jar",
-        "c:\\Users\\Jujus\\Downloads\\openjfx-19_windows-x64_bin-sdk\\javafx-sdk-19\\lib\\javafx-swt.jar",
-        "c:\\Users\\Jujus\\Downloads\\webcam-capture-0.3.12-dist\\webcam-capture-0.3.12.jar"
-    ]
+    "java.project.referencedLibraries": {
+        "include": [
+            "lib/**/*.jar",
+            "c:\\Users\\Jujus\\Downloads\\webcam-capture-0.3.12-dist\\webcam-capture-0.3.12.jar",
+            "c:\\Users\\Jujus\\Downloads\\SmartDashboard-2023.4.1-winx64.jar",
+            "c:\\Users\\Jujus\\Downloads\\gradle-wrapper.jar",
+            "c:\\Users\\Jujus\\.gradle\\caches\\modules-2\\files-2.1\\edu.wpi.first.cscore\\cscore-java\\2023.2.1\\46a5fcdbebf0e13c1c8a308022c16efa3a000575\\cscore-java-2023.2.1.jar",
+            "c:\\Users\\Jujus\\.gradle\\caches\\modules-2\\files-2.1\\edu.wpi.first.wpimath\\wpimath-java\\2023.2.1\\b887e01c26bffbf2370fa788e03bcb800a16551b\\wpimath-java-2023.2.1.jar",
+            "c:\\Users\\Jujus\\.gradle\\caches\\modules-2\\files-2.1\\edu.wpi.first.wpinet\\wpinet-java\\2023.2.1\\658992b6eb9d48666dadb820a93cafac7b443f08\\wpinet-java-2023.2.1.jar",
+            "c:\\Users\\Jujus\\.gradle\\caches\\modules-2\\files-2.1\\edu.wpi.first.wpiutil\\wpiutil-java\\2023.2.1\\fe800fbab1cc0ea468adec9a17502d09f3f82e11\\wpiutil-java-2023.2.1.jar",
+            "c:\\Users\\Jujus\\.gradle\\caches\\modules-2\\files-2.1\\edu.wpi.first.ntcore\\ntcore-java\\2023.2.1\\f4f215b0bf454858a2142647869449a156e38f4a\\ntcore-java-2023.2.1.jar"
+        ],
+        "exclude": [
+            "c:\\Users\\Jujus\\.gradle\\caches\\modules-2\\files-2.1\\edu.wpi.first.ntcore\\ntcore-java\\2023.2.1\\f4f215b0bf454858a2142647869449a156e38f4a\\ntcore-java-2023.2.1.jar",
+            "c:\\Users\\Jujus\\Downloads\\openjfx-19_windows-x64_bin-sdk\\javafx-sdk-19\\lib\\javafx.swing.jar"
+        ]
+    }
 }
